@@ -1,5 +1,13 @@
 package maamissiniva.function.coc;
 
+/**
+ * Consumer of consumer of two arguments.
+ * 
+ * @author vrd
+ *
+ * @param <A> first argument type
+ * @param <B> second argument type
+ */
 public interface CC2<A,B> extends C1<C2<A,B>> {
     
     default <C> CC3<A,B,C> nest(F2<A,B,CC1<C>> f) {
