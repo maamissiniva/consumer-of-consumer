@@ -23,6 +23,11 @@ handled and used like
 We use CCN for consumer of consumer of N arguments in the rest of the document.
 Combining a CC1 with a CC1 yields a CC2 and by extension we expect the 
 combination of a CCN and a CCM to be a CC(N+M).
+## Projections
+The number of arguments can be reduced (e.g: CC3 to CC2). The ignored arguments
+are still managed despite no being shown in the signature. This is useful
+when, for example, building a temporary directory and files in it but
+only using the files. 
 ## Current state
 The current implementation is a proof of concept that should be working but
 many methods are missing (nest and others).
