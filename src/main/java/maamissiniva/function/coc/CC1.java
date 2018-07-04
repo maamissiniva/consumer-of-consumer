@@ -7,8 +7,12 @@ public interface CC1<A> extends C1<C1<A>> {
         return nc -> accept(a -> f.apply(a).accept(b -> nc.accept(a,b))); 
     }
     
-    default <B,C> CC3<A,B,C> next2(F1<A,CC2<B,C>> f) {
+    default <B,C> CC3<A,B,C> nest2(F1<A,CC2<B,C>> f) {
         return nc -> accept(a -> f.apply(a).accept((b,c) -> nc.accept(a,b,c)));
+    }
+    
+    default <B,C,D> CC4<A,B,C,D> nest3(F1<A,CC3<B,C,D>> f) {
+        return nc -> accept(a -> f.apply(a).accept((b,c,d) -> nc.accept(a,b,c,d)));
     }
     
     default <RA> CC1<RA> cc1(F1<A,RA> f) {

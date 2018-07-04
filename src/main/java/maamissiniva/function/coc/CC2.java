@@ -6,6 +6,10 @@ public interface CC2<A,B> extends C1<C2<A,B>> {
         return nc -> accept((a,b) -> f.apply(a,b).accept(c -> nc.accept(a,b,c)));
     }
     
+    default <C,D> CC4<A,B,C,D> nest2(F2<A,B,CC2<C,D>> f) {
+        return nc -> accept((a,b) -> f.apply(a,b).accept((c,d) -> nc.accept(a,b,c,d)));
+    }
+    
     default <RA> CC1<RA> cc1(F2<A,B,RA> f) {
         return nc -> accept((a,b) -> nc.accept(f.apply(a, b)));
     }
