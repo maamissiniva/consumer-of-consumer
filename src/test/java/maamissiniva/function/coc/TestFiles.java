@@ -64,14 +64,14 @@ public class TestFiles {
     }
     
     // Prepare 2 tmp files
-    CC2<Path,Path> twoTmpFiles =
+    public static final CC2<Path,Path> twoTmpFiles =
             withTmpDirectory("cctest")
             .nest(dir      -> withTmpFile(dir,"ccfile","suffix"))
             .nest((dir,f0) -> withTmpFile(dir,"ccfile","suffix"))
             .cc2((dir,f0,f1) -> new T2<>(f0,f1));
    
     // Prepare 2 named files in a temp directory
-    CC2<Path,Path> twoFiles =
+    public static final CC2<Path,Path> twoFiles =
             withTmpDirectory("cctest")
             .nest(dir      -> withFile(dir,"firstfile"))
             .nest((dir,f0) -> withFile(dir,"secondfile"))
@@ -118,21 +118,21 @@ public class TestFiles {
     @Test
     public void test_02() throws Exception {
         twoTmpFiles.accept((f0,f1) -> {
-            System.out.println("using files " + f0 + " " + f1);
+            System.out.println("using files " + f0 + " and " + f1);
         });
     }
     
     @Test
     public void test_03() throws Exception {
         twoFiles.accept((f0,f1) -> {
-            System.out.println("using files " + f0 + " " + f1);
+            System.out.println("using files " + f0 + " and " + f1);
         });
     }
     
     @Test
     public void test_04() throws Exception {
         twoFiles.accept((f0,f1) -> {
-            System.out.println("using files " + f0 + " " + f1);
+            System.out.println("using files " + f0 + " and " + f1);
         });
     }
    

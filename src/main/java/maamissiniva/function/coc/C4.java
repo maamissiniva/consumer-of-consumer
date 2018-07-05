@@ -2,6 +2,7 @@ package maamissiniva.function.coc;
 
 /**
  * Four value consumer.
+ * 
  * @author vrd
  *
  * @param <A> type of first value

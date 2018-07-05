@@ -10,10 +10,21 @@ package maamissiniva.function.coc;
  */
 public interface CC2<A,B> extends C1<C2<A,B>> {
     
+    /**
+     * Combine with a CC1 constructor.
+     * @param f CC1 constructor
+     * @return  CC3
+     */
     default <C> CC3<A,B,C> nest(F2<A,B,CC1<C>> f) {
         return nc -> accept((a,b) -> f.apply(a,b).accept(c -> nc.accept(a,b,c)));
     }
     
+    
+    /**
+     * Combine with a CC2 constructor.
+     * @param f CC2 constructor.
+     * @return  CC4
+     */
     default <C,D> CC4<A,B,C,D> nest2(F2<A,B,CC2<C,D>> f) {
         return nc -> accept((a,b) -> f.apply(a,b).accept((c,d) -> nc.accept(a,b,c,d)));
     }
