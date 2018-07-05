@@ -84,7 +84,7 @@ define and use temporary files and directories with managed life cycles.
 Resource managing code looks like:
 ```java
 withTmpDirectory("cctest")
-.nest(dir      -> withFile(dir,"first_file))
+.nest(dir      -> withFile(dir,"first_file"))
 .nest((dir,f0) -> withFile(dir,"second_file"))
 .accept((dir,f0,f1) -> {
     System.out.println("temp directory : " + dir);
