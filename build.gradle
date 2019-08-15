@@ -1,7 +1,10 @@
 
 plugins {
   id 'java-library'
+  id 'eclipse'
 }
+
+eclipse.project.name = 'maamissiniva-consumer-of-consumer'
 
 dependencies {
   testImplementation 'junit:junit:4.12'
@@ -11,19 +14,11 @@ repositories {
   jcenter()
 }
 
-// This is the default value but when not explicit, eclipse does not see
-// the test sources. 
-sourceSets {
-  test {
-    java.srcDir 'src/test/java'
-  }
-}
-  
 version = '0.1.0'
 
 jar {
   manifest {
-    attributes('Implementation-Title': project.name,
+    attributes('Implementation-Title':   project.name,
                'Implementation-Version': project.version)
   }
 }
