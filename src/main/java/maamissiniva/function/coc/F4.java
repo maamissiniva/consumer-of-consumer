@@ -18,5 +18,9 @@ public interface F4<A,B,C,D,E> {
     default FT4<A,B,C,D,E> ft() {
         return t -> apply(t.a,t.b,t.c,t.d);
     }
+
+    default F1<D,E> apply(A a, B b, C c) {
+    	return d -> apply(a,b,c,d); 
+    }
     
 }

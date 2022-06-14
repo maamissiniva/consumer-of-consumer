@@ -5,6 +5,7 @@ plugins {
 }
 
 eclipse.project.name = 'maamissiniva-consumer-of-consumer'
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 
 dependencies {
   testImplementation 'junit:junit:4.12'
