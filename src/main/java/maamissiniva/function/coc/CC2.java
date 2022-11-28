@@ -12,6 +12,7 @@ public interface CC2<A,B> extends C1<C2<A,B>> {
     
     /**
      * Combine with a CC1 constructor.
+     * @param <C> third value type
      * @param f CC1 constructor
      * @return  CC3
      */
@@ -22,6 +23,8 @@ public interface CC2<A,B> extends C1<C2<A,B>> {
     
     /**
      * Combine with a CC2 constructor.
+     * @param <C> third value type
+     * @param <D> fourth value type
      * @param f CC2 constructor.
      * @return  CC4
      */

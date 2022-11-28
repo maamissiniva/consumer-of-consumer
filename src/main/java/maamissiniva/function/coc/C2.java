@@ -5,8 +5,8 @@ package maamissiniva.function.coc;
  * 
  * @author vrd
  *
- * @param <A>
- * @param <B>
+ * @param <A> first value type
+ * @param <B> second value type
  */
 public interface C2<A,B> {
     

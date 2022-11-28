@@ -11,6 +11,7 @@ public interface CC1<A> extends C1<C1<A>> {
     
     /**
      * Core combination with a CC1.
+     * @param <B> second value type
      * @param f CC1 constructor
      * @return  CC2
      */
@@ -20,6 +21,7 @@ public interface CC1<A> extends C1<C1<A>> {
     
     /**
      * Combination with an independent CC1.
+     * @param <B> second value type
      * @param cc CC1
      * @return   CC2
      */
@@ -29,6 +31,7 @@ public interface CC1<A> extends C1<C1<A>> {
     
     /**
      * Combination with a a CC1 that looks like the combined CC1.
+     * @param <B> second value type
      * @param f CC1 constructor
      * @return  CC1
      */

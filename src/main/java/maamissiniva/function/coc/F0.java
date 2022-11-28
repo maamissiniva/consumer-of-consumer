@@ -5,10 +5,10 @@ package maamissiniva.function.coc;
  * 
  * @author vrd
  *
- * @param <A>
+ * @param <A> value type
  */
 public interface F0<A> {
 
-	A apply();
+    A apply();
 	
 }
