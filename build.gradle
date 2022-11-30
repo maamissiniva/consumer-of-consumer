@@ -9,7 +9,7 @@ plugins {
 group = 'io.github.maamissiniva'
 archivesBaseName = 'consumer-of-consumer'
 
-eclipse.project.name = 'maamissiniva-consumer-of-consumer'
+eclipse.project.name = 'external-maamissiniva-consumer-of-consumer'
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 
 dependencies {
