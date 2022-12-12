@@ -42,6 +42,7 @@ publishing {
                 name = 'Consumer of consumer'
                 description = 'Functional combination of consumers in java.'
                 url = 'https://github.com/maamissiniva/consumer-of-consumer'
+                artifactId = archivesBaseName
                 from components.java
                 licenses {
                     license {
