@@ -18,5 +18,9 @@ public class T3<A,B,C> implements CC1<T3<A,B,C>> {
     public void accept(C1<T3<A, B, C>> ct) throws Exception {
         ct.accept(this);
     }
+
+    public <D> D map(F3<A,B,C,D> f) {
+        return f.apply(a, b, c);
+    }
     
 }

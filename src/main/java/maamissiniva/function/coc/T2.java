@@ -27,6 +27,10 @@ public class T2<A,B> implements CC1<T2<A,B>> {
     		&& Objects.equals(b, t.b);
     }
     
+    public <C> C map(F2<A,B,C> f) {
+        return f.apply(a, b);
+    }
+    
     @Override
     public int hashCode() {
     	return Objects.hash(a, b);
