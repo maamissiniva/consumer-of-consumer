@@ -4,7 +4,7 @@
 
 [maven central](https://central.sonatype.dev/artifact/io.github.maamissiniva/maamissiniva-consumer-of-consumer/0.1.1)
 
-## What is it ?
+## Description
 
 The base idea is that when an object can execute a runnable it defines 
 an execute method that takes a runnable object. Extending the concept a bit
